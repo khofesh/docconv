@@ -14,10 +14,10 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"code.sajari.com/docconv/v2"
-	"code.sajari.com/docconv/v2/docd/internal"
-	"code.sajari.com/docconv/v2/docd/internal/cloudtrace"
-	"code.sajari.com/docconv/v2/docd/internal/debug"
+	"github.com/khofesh/docconv"
+	"github.com/khofesh/docconv/docd/internal"
+	"github.com/khofesh/docconv/docd/internal/cloudtrace"
+	"github.com/khofesh/docconv/docd/internal/debug"
 )
 
 var (
