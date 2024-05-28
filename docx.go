@@ -66,6 +66,9 @@ func ConvertDocx(r io.Reader) (string, map[string]string, error) {
 
 		switch {
 		case override.ContentType == "application/vnd.openxmlformats-package.core-properties+xml":
+			if f == nil {
+				return "", nil, fmt.Errorf("f is nil because override.PartName was not found in zipFiles")
+			}
 			rc, err := f.Open()
 			if err != nil {
 				return "", nil, fmt.Errorf("error opening '%v' from archive: %v", f.Name, err)
