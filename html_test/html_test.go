@@ -8,7 +8,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"code.sajari.com/docconv/v2"
+	"github.com/khofesh/docconv"
 )
 
 func TestConvertHTML_readabilityUseClasses(t *testing.T) {

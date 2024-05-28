@@ -14,8 +14,8 @@ import (
 
 	"cloud.google.com/go/errorreporting"
 
-	"code.sajari.com/docconv/v2"
-	"code.sajari.com/docconv/v2/docd/internal"
+	"github.com/khofesh/docconv"
+	"github.com/khofesh/docconv/docd/internal"
 )
 
 type convertServer struct {
