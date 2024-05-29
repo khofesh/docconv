@@ -54,13 +54,13 @@ func ConvertDocx(r io.Reader) (string, map[string]string, error) {
 
 	zipFiles := mapZipFiles(zr.File)
 
-	theDef := zipFiles["[Content_Types].xml"]
+	weNeed, ok := zipFiles["[Content_Types].xml"]
 
-	if theDef == nil {
+	if !ok {
 		return "", nil, fmt.Errorf("zipFiles[\"[Content_Types].xml\"] is nil")
 	}
 
-	contentTypeDefinition, err := getContentTypeDefinition(theDef)
+	contentTypeDefinition, err := getContentTypeDefinition(weNeed)
 	if err != nil {
 		return "", nil, err
 	}
